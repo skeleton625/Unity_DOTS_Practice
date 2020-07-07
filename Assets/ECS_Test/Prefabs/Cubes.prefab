@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 51492112111684913}
   - component: {fileID: 6019736718707339720}
   - component: {fileID: 4787175753766272631}
-  - component: {fileID: 3194124216674873488}
+  - component: {fileID: 4083529422424335939}
   m_Layer: 0
   m_Name: Cubes
   m_TagString: Object
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 0
---- !u!114 &3194124216674873488
+--- !u!114 &4083529422424335939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,3 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitType: 0
+  UnitSpeed: 10
+  amplitude: 5
+  xOffset: 0.25
+  yOffset: 0.25
