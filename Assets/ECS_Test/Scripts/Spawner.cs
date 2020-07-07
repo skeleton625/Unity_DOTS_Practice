@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
         Emanager = defaultWorld.EntityManager;
 
         /* var */
-        GameObjectConversionSettings settings = GameObjectConversionSettings.FromWorld(defaultWorld, null);
+        GameObjectConversionSettings settings = GameObjectConversionSettings.FromWorld(defaultWorld, new BlobAssetStore());
         entityPrefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(gameObjectPrefab, settings);
 
         InstantiateEntityGrid(xSize, ySize, zSize, spacing);
@@ -35,10 +35,6 @@ public class Spawner : MonoBehaviour
         Emanager.SetComponentData(cloneEntity, new Translation
         {
             Value = position
-        });
-        Emanager.SetComponentData(cloneEntity, new UnitData
-        {
-            UnitType = 1
         });
     }
 
