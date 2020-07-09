@@ -1,19 +1,22 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using Unity.Jobs;
 using Unity.Collections;
 using UnityEngine;
 
 public class EntitySpawnSystem : ComponentSystem
 {
-    private int cnt = 0;
     protected override void OnCreate()
     {
 
     }
 
+    private int cnt = 0;
+    
     protected override void OnUpdate()
     {
+        /*
         if (cnt < 1000)
         {
             Entity spawnedEntity = EntityManager.Instantiate(PrefabConverter.prefabEntity);
@@ -27,5 +30,6 @@ public class EntitySpawnSystem : ComponentSystem
             });
             ++cnt;
         }
+        */
     }
 }

@@ -1,4 +1,7 @@
-﻿using Unity.Entities;
+﻿
+using UnityEngine;
+using Unity.Entities;
+using Unity.Physics;
 
 [GenerateAuthoringComponent]
 public struct EntityData : IComponentData
