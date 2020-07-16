@@ -456,6 +456,9 @@ MonoBehaviour:
   spacing: 1.1
   gameObjectPrefab: {fileID: 5455742244449355028, guid: edf6772df5f6b584d85cde0af0954433,
     type: 3}
+  unitMesh: {fileID: -3467882771243853601, guid: cd5c0a28f36a8634ca19a96d182a7c25,
+    type: 3}
+  unitMaterial: {fileID: 2100000, guid: af19920f27e459f4b89cc4aee1b81e77, type: 2}
 --- !u!4 &1105607402
 Transform:
   m_ObjectHideFlags: 0
