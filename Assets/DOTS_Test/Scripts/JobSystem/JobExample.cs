@@ -2,7 +2,7 @@
 using Unity.Jobs;
 using Unity.Collections;
 
-public class Example : MonoBehaviour
+public class JobExample : MonoBehaviour
 {
     // Start is called before the first frame update
     private void Start()
