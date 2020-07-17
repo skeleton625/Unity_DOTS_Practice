@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
-
+using UnityEngine.AI;
 struct ControllerData : IComponentData
 {
     public float lookSpeedH;

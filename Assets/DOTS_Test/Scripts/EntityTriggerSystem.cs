@@ -39,7 +39,6 @@ public class EntityTriggerSystem : JobComponentSystem
                 return;
             if(allTrees.Exists(entityA) && allPlayers.Exists(entityB))
             {
-                Debug.Log(entityA.ToString() + " " + entityB.ToString());
                 entityCommandBuffer.DestroyEntity(entityA);
             }
             else if(allPlayers.Exists(entityA) && allTrees.Exists(entityB))
