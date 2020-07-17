@@ -1,0 +1,18 @@
+{
+	"name": "com.reese.navmeshdots",
+	"version": "0.10.4",
+	"displayName": "Reese's DOTS Navigation",
+	"description": "DOTS navigation with auto-jumping agents and movable surfaces.",
+	"dependencies": {
+		"com.unity.entities": "0.11.1-preview.4",
+		"com.unity.physics": "0.4.0-preview.5",
+		"com.unity.rendering.hybrid": "0.5.2-preview.4"
+	},
+	"unity": "2019.3",
+	"unityRelease": "2f1",
+	"author": {
+		"name": "Reese Schultz",
+		"email": "reeseschultz@gmail.com",
+		"url": "https://reeseschultz.com"
+	}
+}
