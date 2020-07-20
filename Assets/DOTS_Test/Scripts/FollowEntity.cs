@@ -20,9 +20,7 @@ public class FollowEntity : MonoBehaviour
     {
         if (entityToFollow == Entity.Null) return;
 
-        Translation entPos = Emanager.GetComponentData<Translation>(entityToFollow);
-        Rotation entRot = Emanager.GetComponentData<Rotation>(entityToFollow);
-        transform.position = entPos.Value + offset;
-        transform.rotation = entRot.Value;
+        Emanager.SetComponentData(entityToFollow, new Translation { Value = transform.position });
+        Emanager.SetComponentData(entityToFollow, new Rotation { Value = transform.rotation });
     }
 }
