@@ -26,14 +26,14 @@ public class EntityTriggerSystem : JobComponentSystem
     struct EntityTriggerSystemJob : ITriggerEventsJob
     {
         [ReadOnly] public ComponentDataFromEntity<TreeData> allTrees;
-        [ReadOnly] public ComponentDataFromEntity<ControllerData> allPlayers;
+        [ReadOnly] public ComponentDataFromEntity<CitizenData> allPlayers;
 
         public EntityCommandBuffer entityCommandBuffer;
 
         public void Execute(TriggerEvent triggerEvent)
         {
-            Entity entityA = triggerEvent.Entities.EntityA;
-            Entity entityB = triggerEvent.Entities.EntityB;
+            Entity entityA = triggerEvent.EntityA;
+            Entity entityB = triggerEvent.EntityB;
 
             if (allTrees.Exists(entityA) && allTrees.Exists(entityB))
                 return;
@@ -53,7 +53,7 @@ public class EntityTriggerSystem : JobComponentSystem
         var job = new EntityTriggerSystemJob();
 
         job.allTrees = GetComponentDataFromEntity<TreeData>(true);
-        job.allPlayers = GetComponentDataFromEntity<ControllerData>(true);
+        job.allPlayers = GetComponentDataFromEntity<CitizenData>(true);
         job.entityCommandBuffer = commandBufferSystem.CreateCommandBuffer();
 
         JobHandle jobHandle = job.Schedule(stepPhysicsWorld.Simulation, ref buildPhysicsWorld.PhysicsWorld, inputDeps);
